@@ -1,0 +1,657 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap');
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+  height: 100vh;
+  font-family: "Raleway";
+  font-size: medium;
+  background-image: url("../asset/PNG/Bubbles.png");
+  background-color: #f2f2f2;
+  background-size: cover;
+}
+
+/* This part of "a" tag is used from https://codepen.io/geoffgraham/pen/bxEVEN*/
+a {
+  background: linear-gradient(to bottom, var(--mainColor) 0%, var(--mainColor) 100%);
+	background-position: 0 100%;
+	background-repeat: repeat-x;
+	background-size: 3px 3px;
+  color: #000;
+  text-decoration: none;
+}
+
+a:hover {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg id='squiggle-link' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 0 20 4'%3E%3Cstyle type='text/css'%3E.squiggle{animation:shift .3s linear infinite;}@keyframes shift {from {transform:translateX(0);}to {transform:translateX(-20px);}}%3C/style%3E%3Cpath fill='none' stroke='%23ff9800' stroke-width='2' class='squiggle' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E");
+  background-position: 0 100%;
+  background-size: auto 6px;
+  background-repeat: repeat-x;
+  text-decoration: none;
+}
+
+
+button {
+  padding: 0px;
+  border: none;
+  background: none;
+  outline: none;
+}
+
+.header {
+  height: 50px;
+  position: fixed;
+  width: 100%;
+  background-color: #f2f2f2;
+  z-index: 1;
+}
+
+.menu {
+  display: none;
+}
+
+.header-navigation {
+  height: auto;
+}
+
+ul {
+  padding: 0px;
+  padding-left: 80px;
+}
+
+li {
+  list-style: none;
+  float: left;
+  font-weight: 500;
+  margin-right: 20px;
+}
+
+.main {
+  height: 100%;
+  overflow: scroll;
+  display: flex;
+}
+
+.headline {
+  flex: 8;
+  position: relative;
+  padding-top: 162px;
+  padding-left: 80px;
+}
+
+.main .headline .main-headline h1 {
+  background-image: -webkit-linear-gradient(left, rgb(255, 145, 0) , rgb(253, 255, 138));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation-name: shalom;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes shalom {
+  0% {
+    background-image: -webkit-linear-gradient(left, rgb(255, 0, 234) , rgb(128, 120, 243));
+  }
+  25% {
+    background-image: -webkit-linear-gradient(left, rgb(218, 34, 255) , rgb(127, 112, 255));
+  }
+  50% {
+    background-image: -webkit-linear-gradient(left, rgb(181, 69, 255) , rgb(69, 195, 253));
+  }
+  75% {
+    background-image: -webkit-linear-gradient(left, rgb(113, 165, 243) , rgb(233, 70, 248));
+  }
+  100% {
+    background-image: -webkit-linear-gradient(left, rgb(117, 140, 243) , rgb(255, 5, 255) );
+  }
+  
+}
+
+h1 {
+  font-size: 65px;
+  font-weight: 700;
+}
+
+p {
+  font-weight: 500;
+  font-size: medium;
+  margin-top: -30px;
+}
+
+.profile_picture {
+  position: relative;
+  flex: 4;
+  float: right;
+  height: auto;
+  width: 50%;
+  z-index: 2;
+}
+
+img {
+  height: 768px;
+  float: right;
+  margin-bottom: 0px;
+}
+
+@media only screen and (max-width: 1024px) {
+  .main {
+    height: 100%;
+    overflow: scroll;
+    display: flex;
+  }
+
+  ul {
+    padding: 0px 50px 10px 80px;
+  }
+
+  li {
+    font-size: small;
+    margin-right: 10px;
+  }
+
+  .headline {
+    flex: 8;
+    position: relative;
+    padding-top: 162px;
+    padding-left: 80px;
+  }
+
+  h1 {
+    font-size: 50px;
+    font-weight: 700;
+  }
+
+  p {
+    font-weight: 500;
+    font-size: medium;
+    margin-top: -30px;
+  }
+
+}
+
+@media only screen and (max-width: 768px) {
+  .main {
+    height: 100%;
+    overflow: scroll;
+    display: flex;
+  }
+
+  ul {
+    padding: 0px 50px 10px 80px;
+  }
+
+  li {
+    font-size: small;
+    margin-right: 10px;
+  }
+
+  .headline {
+    flex: 8;
+    position: relative;
+    padding-top: 162px;
+    padding-left: 80px;
+  }
+
+  h1 {
+    font-size: 50px;
+    font-weight: 700;
+  }
+
+  p {
+    font-weight: 500;
+    font-size: medium;
+    margin-top: -30px;
+  }
+
+  .profile_picture {
+    position: relative;
+    flex: 4;
+    float: right;
+    height: auto;
+    width: 100%;
+  }
+
+  img {
+    height: 600px;
+    float: right;
+    margin-bottom: 0px;
+  }
+}
+
+@media only screen and (max-width: 481px) {
+  .header {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .header-navigation {
+    height: 100px;
+    display: none; /*this variable is changeable from javascript */
+    padding: 0px;
+    margin: 0px;
+  }
+
+  .menu {
+    display: flex;
+    width: auto;
+  }
+
+  .menu-icon {
+    height: 30px;
+    width: 30px;
+    margin: 10px;
+  }
+
+  ul {
+    padding: 10px 10px 10px 10px;
+    margin: 0px;
+    text-align: center;
+  }
+
+  li {
+    font-weight: 600;
+    font-size: small;
+    float: none;
+    margin: 0px;
+    padding-bottom: 20px;
+    animation-name: list-element;
+    animation-duration: 1s;
+  }
+
+  @keyframes list-element {
+      0% {opacity: 0; }
+      25% {opacity: 0.25;}
+      50% {opacity: 0.5;}
+      75% {opacity: 0.75;}
+      100% {opacity: 1;}
+  }
+
+
+  .main {
+    height: 100%;
+    overflow: scroll;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .headline {
+    flex: auto;
+    position: relative;
+    padding: 20px 10px 0px 10px;
+    text-align: center;
+    margin-top: 50px;
+  }
+
+  h1 {
+    font-size: 30px;
+    font-weight: 700;
+  }
+
+  p {
+    font-weight: 500;
+    font-size: 10px;
+    margin-top: -10px;
+  }
+
+  .profile_picture {
+    position: relative;
+    flex: auto;
+    float: right;
+    height: auto;
+    width: 100%;
+  }
+
+  img {
+    height: 535px;
+    float: right;
+    margin-bottom: 0px;
+  }
+}
+
+
+/* About Me Page CSS starts from here */
+.profile_picture2 {
+  position: relative;
+  flex: 4;
+  float: left;
+  height: auto;
+  width: 50%;
+}
+
+.about-me-information {
+  padding-bottom: 10px;
+  margin-left: -80px;
+}
+
+.about-me-heading {
+  flex: auto;
+  position: relative;
+  padding-top: 0px;
+  padding-left: 80px;
+  text-align: left;
+  margin-left: 10px;
+}
+
+.about-me {
+  font-size: xx-large;
+  margin-top: 50px;
+  margin-left: -60px;
+}
+
+.card1 {
+  background-color: black;
+  color: white;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+.card2 {
+  background-color: white;
+  color: black;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+h2 {
+  margin: 10px;
+  font-weight: 700;
+  font-size: large;
+}
+
+p {
+  margin: 10px;
+  justify-self: center;
+  font-size: medium;
+}
+
+@media only screen and (max-width: 1024px) {
+  .profile_picture2 {
+    position: relative;
+    flex: 4;
+    float: left;
+    height: auto;
+    width: 100%;
+  }
+
+  .profile {
+    margin: 0px;
+    height: 600px;
+    width: auto;
+    padding-top: 100px; 
+  }
+}
+
+@media only screen and (max-width: 768px) {
+
+  .about-me{
+    text-align: center;
+  }
+
+  .profile_picture2 {
+    position: relative;
+    flex: 4;
+    float: left;
+    height: auto;
+    width: 100%;
+    display: none;
+  }
+}
+
+
+/* Contact Me Page CSS */
+
+.black {
+  background-color: #293436;
+  background-image: url("../asset/PNG/Bubbles.png");
+}
+
+.white {
+  color: white;
+}
+
+.white-list {
+  color: white;
+}
+
+.row {
+  display: flex;
+}
+
+.column {
+  padding: 200px;
+}
+
+.button {
+  position: relative;
+  background-image: linear-gradient(to right, rgb(103, 212, 255) , rgb(145, 255, 150));
+  padding: 10px;
+  border-radius: 5px;
+  width: 90%;
+  height: 60px;
+  margin-bottom: 20px;
+}
+
+.button:hover {
+  background-image: linear-gradient(to right, rgb(145, 255, 150) , rgb(103, 212, 255));
+  cursor: pointer;
+  width: 95%;
+  height: 65px;
+}
+
+.feedback {
+  flex: 8;
+  position: relative;
+  padding-top: 162px;
+  text-align: center;
+  margin: 0px;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+@media only screen and (max-width: 1000px) {
+  .feedback h2 {
+    font-size: small;
+  }
+}
+
+@media only screen and (max-width: 481px) {
+.feedback {
+  padding-top: 50px;
+  padding-left: 50px;
+  padding-right: 50px;
+
+}
+
+.white-list {
+  color: black;
+}
+
+.menu-icon-white {
+  background-color: white;
+}
+
+}
+
+/* Works Page CSS */
+
+.work-experience {
+  /* border: rgb(94, 94, 91) solid 3px; */
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+}
+
+.work {
+  /* border: white solid 2px; */
+  flex: auto;
+  display: flex;
+  flex-direction: column;
+  flex: 4;
+}
+
+.headline-work {
+  /* border: white solid 2px; */
+  flex: 2;
+}
+
+.work-list {
+  /* border: red solid 2px; */
+  padding-bottom: 20px;
+  padding-top: 20px;
+  flex:10;
+  display: flex;
+  justify-content: center;
+ 
+ 
+}
+
+.headline-work h1 {
+  font-size: xx-large;
+  margin-left: 150px;
+}
+
+.work-list .card1 {
+  height: auto;
+  width: 250px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* border: #f2f2f2 solid 2px; */
+}
+
+.card1 .button{
+  width: 90px;
+  height: 30px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 30px;
+}
+
+.experience {
+  /* border: white solid 3px; */
+  flex: auto;
+}
+
+.headline-experience {
+  /* border: white solid 2px; */
+}
+
+.headline-experience h1 {
+  font-size: xx-large;
+  margin-left: 150px;
+}
+
+.experience-list {
+  padding-bottom: 20px;
+  padding-top: 20px;
+  /* padding: 20px 100px 20px 100px; */
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.experience-list ul li{
+  margin: 0px;
+}
+
+.experience-list .card1 {
+  position: relative;
+  border: white solid 2px;
+  text-align: left;
+}
+
+.container {
+  display: flex;
+  padding: 0px;
+}
+
+.container h2 {
+  flex: 10;
+  padding-bottom: 0px;
+}
+
+.container h3 {
+  margin: 2px;
+}
+.container .button {
+  flex: 2;
+  width: 75px;
+  height: 40px;
+  margin: 20px;
+  padding: 4px;
+  background-image: linear-gradient(to right, rgb(255, 145, 0) , rgb(253, 255, 138));
+}
+
+.container .button:hover {
+  background-image: linear-gradient(to right, rgb(253, 255, 138) , rgb(255, 145, 0));
+}
+
+.modal-1 {
+  position: absolute;
+  top: 100px;
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  width: 300px;
+  height: auto;
+  z-index: 3;
+  margin: auto;
+  align-self: center;
+  padding: 20px;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.5s;
+}
+
+.active {
+  pointer-events: all;
+  opacity: 1.0;
+}
+
+
+@media only screen and (max-width: 949px) {
+  .work-list ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .work-list {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 414px) {
+  .headline-work {
+    text-align: center;
+  }
+
+  .headline-work h1 {
+    margin-left: 0px;
+  }
+
+  .headline-experience {
+    text-align: center;
+  }
+
+  .headline-experience h1 {
+    margin-left:0px;
+
+  }
+}
